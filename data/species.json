@@ -1,0 +1,12 @@
+[
+  {"id":"aasimar","nome":"Aasimar","deslocamento":"9 m","tamanho":"Médio ou Pequeno"},
+  {"id":"anao","nome":"Anão","deslocamento":"9 m","tamanho":"Médio","pvPorNivel":1},
+  {"id":"draconato","nome":"Draconato","deslocamento":"9 m","tamanho":"Médio"},
+  {"id":"elfo","nome":"Elfo","deslocamento":"9 m","tamanho":"Médio"},
+  {"id":"gnomo","nome":"Gnomo","deslocamento":"9 m","tamanho":"Pequeno"},
+  {"id":"golias","nome":"Golias","deslocamento":"10,5 m","tamanho":"Médio"},
+  {"id":"humano","nome":"Humano","deslocamento":"9 m","tamanho":"Médio ou Pequeno"},
+  {"id":"orc","nome":"Orc","deslocamento":"9 m","tamanho":"Médio"},
+  {"id":"pequenino","nome":"Pequenino","deslocamento":"9 m","tamanho":"Pequeno"},
+  {"id":"tiferino","nome":"Tiferino","deslocamento":"9 m","tamanho":"Médio ou Pequeno"}
+]
