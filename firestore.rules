@@ -1,0 +1,59 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function signedIn() { return request.auth != null; }
+    function uid() { return request.auth.uid; }
+    function camp(c) { return get(/databases/$(db)/documents/campaigns/$(c)).data; }
+    function isDM(c) { return signedIn() && c != null && camp(c).dmUid == uid(); }
+    function isMember(c) { return signedIn() && c != null && uid() in camp(c).members; }
+
+    // Perfil: cada usuário só vê e edita o próprio.
+    match /users/{userId} {
+      allow read, write: if signedIn() && uid() == userId;
+    }
+
+    // Código da sala -> id da campanha
+    match /joinCodes/{code} {
+      allow get: if signedIn();
+      allow create: if signedIn() && request.resource.data.dmUid == uid();
+      allow delete: if signedIn() && resource.data.dmUid == uid();
+    }
+
+    match /campaigns/{c} {
+      allow read: if signedIn() && (resource.data.dmUid == uid() || uid() in resource.data.members);
+      allow create: if signedIn() && request.resource.data.dmUid == uid();
+      allow update: if isDM(c)
+        || (signedIn()
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members'])
+            && request.resource.data.members.diff(resource.data.members).affectedKeys().hasOnly([uid()])
+            && request.resource.data.members[uid()] == 'player');
+      allow delete: if isDM(c);
+
+      match /npcs/{id}          { allow read, write: if isDM(c); }
+      match /dm/{doc}           { allow read, write: if isDM(c); }
+      match /publicNpcs/{id}    { allow read: if isMember(c); allow write: if isDM(c); }
+      match /combat/{doc}       { allow read: if isMember(c); allow write: if isDM(c); }
+      match /maps/{m}/{rest=**} { allow read: if isMember(c); allow write: if isDM(c); }
+    }
+
+    // Fichas: pertencem ao jogador. Só o DONO e o MESTRE da mesa onde a ficha está podem ver/editar.
+    // Outros jogadores não enxergam fichas alheias.
+    match /characters/{id} {
+      function owner() { return signedIn() && resource.data.ownerUid == uid(); }
+      function dmOfIt() { return isDM(resource.data.campaignId); }
+      // Ao ligar a ficha a uma mesa, o dono precisa ser membro dela.
+      function validCampaign() {
+        return request.resource.data.campaignId == null || isMember(request.resource.data.campaignId);
+      }
+
+      allow read: if owner() || dmOfIt();
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == uid()
+        && validCampaign();
+      allow update: if (owner() && validCampaign()
+                        || dmOfIt() && request.resource.data.campaignId == resource.data.campaignId)
+        && request.resource.data.ownerUid == resource.data.ownerUid;
+      allow delete: if owner();
+    }
+  }
+}

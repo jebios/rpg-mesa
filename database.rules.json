@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "presence": {
+      "$campaign": {
+        ".read": "auth != null",
+        "$uid": { ".write": "auth != null && auth.uid === $uid" }
+      }
+    },
+    "pins": {
+      "$campaign": {
+        ".read": "auth != null",
+        "$map": {
+          "$pin": {
+            ".write": "auth != null && (!data.exists() || data.child('uid').val() === auth.uid)",
+            ".validate": "newData.hasChildren(['x','y','uid'])"
+          }
+        }
+      }
+    }
+  }
+}

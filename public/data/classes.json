@@ -1,0 +1,14 @@
+[
+  {"id":"barbaro","nome":"Bárbaro","dadoVida":12,"salvaguardas":["for","con"],"atributoConjuracao":null,"conjurador":"none"},
+  {"id":"bardo","nome":"Bardo","dadoVida":8,"salvaguardas":["des","car"],"atributoConjuracao":"car","conjurador":"full"},
+  {"id":"bruxo","nome":"Bruxo","dadoVida":8,"salvaguardas":["sab","car"],"atributoConjuracao":"car","conjurador":"pact"},
+  {"id":"clerigo","nome":"Clérigo","dadoVida":8,"salvaguardas":["sab","car"],"atributoConjuracao":"sab","conjurador":"full"},
+  {"id":"druida","nome":"Druida","dadoVida":8,"salvaguardas":["int","sab"],"atributoConjuracao":"sab","conjurador":"full"},
+  {"id":"feiticeiro","nome":"Feiticeiro","dadoVida":6,"salvaguardas":["con","car"],"atributoConjuracao":"car","conjurador":"full"},
+  {"id":"guardiao","nome":"Guardião","dadoVida":10,"salvaguardas":["for","des"],"atributoConjuracao":"sab","conjurador":"half"},
+  {"id":"guerreiro","nome":"Guerreiro","dadoVida":10,"salvaguardas":["for","con"],"atributoConjuracao":null,"conjurador":"none"},
+  {"id":"ladino","nome":"Ladino","dadoVida":8,"salvaguardas":["des","int"],"atributoConjuracao":null,"conjurador":"none"},
+  {"id":"mago","nome":"Mago","dadoVida":6,"salvaguardas":["int","sab"],"atributoConjuracao":"int","conjurador":"full"},
+  {"id":"monge","nome":"Monge","dadoVida":8,"salvaguardas":["for","des"],"atributoConjuracao":null,"conjurador":"none"},
+  {"id":"paladino","nome":"Paladino","dadoVida":10,"salvaguardas":["sab","car"],"atributoConjuracao":"car","conjurador":"half"}
+]

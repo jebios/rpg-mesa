@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mesa de RPG</title>
+  <link rel="stylesheet" href="./src/ui/base.css" />
+  <style>
+    main { max-width: 560px; margin: 0 auto; padding: 2rem 16px; }
+    .choice { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    .choice a { text-decoration: none; color: inherit; display: block; }
+    .choice a:hover .card { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mesa de RPG — D&amp;D 2024</h1>
+    <p class="muted">Escolha seu papel na mesa.</p>
+    <div class="choice">
+      <a href="./escudo.html"><div class="card"><h2>Escudo do Mestre</h2><p class="muted">Criar sala, acompanhar as fichas do grupo em tempo real, aplicar dano e cura. Melhor no computador ou tablet.</p></div></a>
+      <a href="./grimorio.html"><div class="card"><h2>Grimório do Aventureiro</h2><p class="muted">Entrar na sala com o código, criar e usar sua ficha no celular.</p></div></a>
+    </div>
+  </main>
+</body>
+</html>
