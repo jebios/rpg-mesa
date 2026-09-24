@@ -1,91 +1,916 @@
 {
-  "versao": "escudo-do-mestre-1",
-  "fonte": "D&D 5E - Escudo do Mestre 01 a 04 (tabelas de equipamento, recipientes, iluminação e pacotes de aventureiro)",
+  "versao": "escudo-do-mestre-2",
+  "fonte": "D&D 5E - Escudo do Mestre 01 a 04 (tabelas de equipamento, recipientes, iluminação e pacotes de aventureiro) Armas e armaduras vêm da tabela de equipamento do PDF 03.",
   "itens": [
-    { "nome": "Algibeira", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 15 cm³ ou 3 kg de equipamentos." },
-    { "nome": "Balde", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 12 litros (sólidos)." },
-    { "nome": "Barril", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 160 litros (sólidos)." },
-    { "nome": "Baú", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 3,5 m³ ou 150 kg de equipamentos." },
-    { "nome": "Caneca", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 500 ml." },
-    { "nome": "Cantil", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 2 litros." },
-    { "nome": "Cesto", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 60 cm³ ou 20 kg de equipamentos." },
-    { "nome": "Frasco", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 120 ml." },
-    { "nome": "Garrafa", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 750 ml." },
-    { "nome": "Jarra", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 5 litros." },
-    { "nome": "Mochila", "categoria": "Recipientes", "peso": "1,5 kg", "preco": "2 po", "descricao": "Capacidade: 30 dm³ ou 15 kg de equipamentos." },
-    { "nome": "Panela de Ferro", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 4 litros." },
-    { "nome": "Saco", "categoria": "Recipientes", "peso": "", "preco": "", "descricao": "Capacidade: 30 dm³ ou 13 kg de equipamentos." },
-
-    { "nome": "Tocha", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "6m de luz plena + 6m de penumbra. Queima por 1 hora." },
-    { "nome": "Vela", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "1,5m de luz plena + 1,5m de penumbra. Queima por 1 hora." },
-    { "nome": "Lâmpada", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "4,5m de luz plena + 4,5m de penumbra. 1 frasco de óleo dura 6 horas." },
-    { "nome": "Lanterna Coberta", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "9m de luz plena + 9m de penumbra. 1 frasco de óleo dura 6 horas. Pode ser fechada para bloquear a luz." },
-    { "nome": "Lanterna Furta-Fogo", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "Cone de 18m de luz plena + 18m de penumbra. 1 frasco de óleo dura 6 horas." },
-    { "nome": "Caixa de Fogo (isqueiro)", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "Pederneira, aço e isca. Usar uma ação para acender uma tocha, vela, lamparina ou fogueira já preparada." },
-    { "nome": "Frasco de Óleo", "categoria": "Luz e Fogo", "peso": "", "preco": "", "descricao": "Combustível para lamparina, lanterna ou lâmpada (6h), ou pode ser derramado e aceso como arma improvisada." },
-
-    { "nome": "Cerveja (Caneca)", "categoria": "Comida e Bebida", "peso": "", "preco": "4 pc", "descricao": "" },
-    { "nome": "Cerveja (Galão)", "categoria": "Comida e Bebida", "peso": "", "preco": "2 pp", "descricao": "" },
-    { "nome": "Pão (pedaço)", "categoria": "Comida e Bebida", "peso": "", "preco": "2 pc", "descricao": "" },
-    { "nome": "Queijo (pedaço)", "categoria": "Comida e Bebida", "peso": "", "preco": "1 pp", "descricao": "" },
-    { "nome": "Carne (pedaço)", "categoria": "Comida e Bebida", "peso": "", "preco": "3 pp", "descricao": "" },
-    { "nome": "Vinho, comum (jarro)", "categoria": "Comida e Bebida", "peso": "", "preco": "2 pp", "descricao": "" },
-    { "nome": "Vinho, fino (garrafa)", "categoria": "Comida e Bebida", "peso": "", "preco": "10 po", "descricao": "" },
-    { "nome": "Banquete (por pessoa)", "categoria": "Comida e Bebida", "peso": "", "preco": "10 po", "descricao": "" },
-    { "nome": "Refeição, miserável (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "3 pc", "descricao": "" },
-    { "nome": "Refeição, pobre (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "6 pc", "descricao": "" },
-    { "nome": "Refeição, modesta (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "3 pp", "descricao": "" },
-    { "nome": "Refeição, confortável (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "5 pp", "descricao": "" },
-    { "nome": "Refeição, rica (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "8 pp", "descricao": "" },
-    { "nome": "Refeição, aristocrática (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "2 po", "descricao": "" },
-    { "nome": "Estadia, miserável (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "7 pc", "descricao": "Hospedagem em estalagem." },
-    { "nome": "Estadia, pobre (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "1 pp", "descricao": "Hospedagem em estalagem." },
-    { "nome": "Estadia, modesta (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "5 pp", "descricao": "Hospedagem em estalagem." },
-    { "nome": "Estadia, confortável (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "8 pp", "descricao": "Hospedagem em estalagem." },
-    { "nome": "Estadia, rica (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "2 po", "descricao": "Hospedagem em estalagem." },
-    { "nome": "Estadia, aristocrática (dia)", "categoria": "Comida e Bebida", "peso": "", "preco": "4 po", "descricao": "Hospedagem em estalagem." },
-
-    { "nome": "Ferramentas de Carpinteiro", "categoria": "Ferramentas de Ofício", "peso": "3 kg", "preco": "8 po", "descricao": "" },
-    { "nome": "Ferramentas de Cartógrafo", "categoria": "Ferramentas de Ofício", "peso": "3 kg", "preco": "15 po", "descricao": "" },
-    { "nome": "Ferramentas de Costureiro", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "1 po", "descricao": "" },
-    { "nome": "Ferramentas de Coureiro", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "5 po", "descricao": "" },
-    { "nome": "Ferramentas de Entalhador", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "1 po", "descricao": "" },
-    { "nome": "Ferramentas de Ferreiro", "categoria": "Ferramentas de Ofício", "peso": "4 kg", "preco": "20 po", "descricao": "" },
-    { "nome": "Ferramentas de Funileiro", "categoria": "Ferramentas de Ofício", "peso": "5 kg", "preco": "50 po", "descricao": "" },
-    { "nome": "Ferramentas de Joalheiro", "categoria": "Ferramentas de Ofício", "peso": "1 kg", "preco": "25 po", "descricao": "" },
-    { "nome": "Ferramentas de Oleiro", "categoria": "Ferramentas de Ofício", "peso": "1,5 kg", "preco": "10 po", "descricao": "" },
-    { "nome": "Ferramentas de Pedreiro", "categoria": "Ferramentas de Ofício", "peso": "4 kg", "preco": "10 po", "descricao": "" },
-    { "nome": "Ferramentas de Pintor", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "10 po", "descricao": "" },
-    { "nome": "Ferramentas de Sapateiro", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "5 po", "descricao": "" },
-    { "nome": "Ferramentas de Vidreiro", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "30 po", "descricao": "" },
-    { "nome": "Ferramentas de Alquimista", "categoria": "Ferramentas de Ofício", "peso": "4 kg", "preco": "50 po", "descricao": "" },
-    { "nome": "Suprimentos de Cervejeiro", "categoria": "Ferramentas de Ofício", "peso": "4,5 kg", "preco": "20 po", "descricao": "" },
-    { "nome": "Suprimentos de Caligrafia", "categoria": "Ferramentas de Ofício", "peso": "2,5 kg", "preco": "10 po", "descricao": "" },
-    { "nome": "Utensílios de Cozinheiro", "categoria": "Ferramentas de Ofício", "peso": "4 kg", "preco": "1 po", "descricao": "" },
-    { "nome": "Ferramentas de Navegação", "categoria": "Ferramentas de Ofício", "peso": "1 kg", "preco": "25 po", "descricao": "Traçar rumo e seguir cartas náuticas." },
-    { "nome": "Ferramentas de Ladrão", "categoria": "Ferramentas de Ofício", "peso": "0,5 kg", "preco": "25 po", "descricao": "Abrir fechaduras e desarmar armadilhas." },
-
-    { "nome": "Kit de Disfarce", "categoria": "Kits e Instrumentos", "peso": "1,5 kg", "preco": "25 po", "descricao": "Cosméticos, tintura de cabelo e adereços para criar disfarces." },
-    { "nome": "Kit de Falsificação", "categoria": "Kits e Instrumentos", "peso": "2,5 kg", "preco": "15 po", "descricao": "Papéis, tintas e selos para falsificar documentos." },
-    { "nome": "Kit de Herbalismo", "categoria": "Kits e Instrumentos", "peso": "1,5 kg", "preco": "5 po", "descricao": "Identificar/aplicar ervas; necessário para criar antídotos e poções de cura." },
-    { "nome": "Kit de Venenos", "categoria": "Kits e Instrumentos", "peso": "1 kg", "preco": "50 po", "descricao": "Frascos e produtos químicos para criar venenos." },
-    { "nome": "Baralho de Cartas", "categoria": "Kits e Instrumentos", "peso": "", "preco": "5 pp", "descricao": "Kit de jogos." },
-    { "nome": "Conjunto de Dados", "categoria": "Kits e Instrumentos", "peso": "", "preco": "1 pp", "descricao": "Kit de jogos." },
-    { "nome": "Xadrez do Dragão", "categoria": "Kits e Instrumentos", "peso": "0,25 kg", "preco": "1 po", "descricao": "Kit de jogos." },
-    { "nome": "Alaúde", "categoria": "Kits e Instrumentos", "peso": "1 kg", "preco": "35 po", "descricao": "Instrumento musical." },
-    { "nome": "Flauta", "categoria": "Kits e Instrumentos", "peso": "0,5 kg", "preco": "2 po", "descricao": "Instrumento musical." },
-    { "nome": "Flauta de Pã", "categoria": "Kits e Instrumentos", "peso": "1 kg", "preco": "12 po", "descricao": "Instrumento musical." },
-    { "nome": "Gaita de Foles", "categoria": "Kits e Instrumentos", "peso": "3 kg", "preco": "30 po", "descricao": "Instrumento musical." },
-    { "nome": "Lira", "categoria": "Kits e Instrumentos", "peso": "1 kg", "preco": "30 po", "descricao": "Instrumento musical." },
-    { "nome": "Tambor", "categoria": "Kits e Instrumentos", "peso": "1,5 kg", "preco": "6 po", "descricao": "Instrumento musical." },
-    { "nome": "Violino", "categoria": "Kits e Instrumentos", "peso": "3 kg", "preco": "30 po", "descricao": "Instrumento musical." },
-
-    { "nome": "Pacote de Aventureiro", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "12 po", "descricao": "Mochila, pé de cabra, martelo, 10 pítons, 10 tochas, caixa de fogo, 10 dias de rações, cantil e 15m de corda de cânhamo." },
-    { "nome": "Pacote de Explorador", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "10 po", "descricao": "Mochila, saco de dormir, kit de refeição, caixa de fogo, 10 tochas, 10 dias de rações, cantil e 15m de corda de cânhamo." },
-    { "nome": "Pacote de Assaltante", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "16 po", "descricao": "Mochila, saco com 1.000 esferas de metal, 3m de linha, sino, 5 velas, pé de cabra, martelo, 10 pítons, lanterna coberta, 2 frascos de óleo, 5 dias de rações, caixa de fogo, cantil e 15m de corda de cânhamo." },
-    { "nome": "Pacote de Diplomata", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "39 po", "descricao": "Baú, 2 caixas para mapas/pergaminhos, roupas finas, vidro de tinta, caneta tinteiro, lâmpada, 2 frascos de óleo, 5 folhas de papel, vidro de perfume, parafina e sabão." },
-    { "nome": "Pacote de Estudioso", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "40 po", "descricao": "Mochila, livro de estudo, vidro de tinta, caneta tinteiro, 10 folhas de pergaminho, saquinho de areia e pequena faca." },
-    { "nome": "Pacote de Sacerdote", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "19 po", "descricao": "Mochila, cobertor, 10 velas, caixa de fogo, caixa de esmolas, 2 blocos de incenso, incensário, vestes, 2 dias de rações e cantil." },
-    { "nome": "Pacote de Artista", "categoria": "Pacotes de Aventureiro", "peso": "", "preco": "40 po", "descricao": "Mochila, saco de dormir, 2 fantasias, 5 velas, 5 dias de rações, cantil e kit de disfarce." }
+    {
+      "nome": "Algibeira",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 15 cm³ ou 3 kg de equipamentos."
+    },
+    {
+      "nome": "Balde",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 12 litros (sólidos)."
+    },
+    {
+      "nome": "Barril",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 160 litros (sólidos)."
+    },
+    {
+      "nome": "Baú",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 3,5 m³ ou 150 kg de equipamentos."
+    },
+    {
+      "nome": "Caneca",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 500 ml."
+    },
+    {
+      "nome": "Cantil",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 2 litros."
+    },
+    {
+      "nome": "Cesto",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 60 cm³ ou 20 kg de equipamentos."
+    },
+    {
+      "nome": "Frasco",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 120 ml."
+    },
+    {
+      "nome": "Garrafa",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 750 ml."
+    },
+    {
+      "nome": "Jarra",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 5 litros."
+    },
+    {
+      "nome": "Mochila",
+      "categoria": "Recipientes",
+      "peso": "1,5 kg",
+      "preco": "2 po",
+      "descricao": "Capacidade: 30 dm³ ou 15 kg de equipamentos."
+    },
+    {
+      "nome": "Panela de Ferro",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 4 litros."
+    },
+    {
+      "nome": "Saco",
+      "categoria": "Recipientes",
+      "peso": "",
+      "preco": "",
+      "descricao": "Capacidade: 30 dm³ ou 13 kg de equipamentos."
+    },
+    {
+      "nome": "Tocha",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "6m de luz plena + 6m de penumbra. Queima por 1 hora."
+    },
+    {
+      "nome": "Vela",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "1,5m de luz plena + 1,5m de penumbra. Queima por 1 hora."
+    },
+    {
+      "nome": "Lâmpada",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "4,5m de luz plena + 4,5m de penumbra. 1 frasco de óleo dura 6 horas."
+    },
+    {
+      "nome": "Lanterna Coberta",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "9m de luz plena + 9m de penumbra. 1 frasco de óleo dura 6 horas. Pode ser fechada para bloquear a luz."
+    },
+    {
+      "nome": "Lanterna Furta-Fogo",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "Cone de 18m de luz plena + 18m de penumbra. 1 frasco de óleo dura 6 horas."
+    },
+    {
+      "nome": "Caixa de Fogo (isqueiro)",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "Pederneira, aço e isca. Usar uma ação para acender uma tocha, vela, lamparina ou fogueira já preparada."
+    },
+    {
+      "nome": "Frasco de Óleo",
+      "categoria": "Luz e Fogo",
+      "peso": "",
+      "preco": "",
+      "descricao": "Combustível para lamparina, lanterna ou lâmpada (6h), ou pode ser derramado e aceso como arma improvisada."
+    },
+    {
+      "nome": "Cerveja (Caneca)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "4 pc",
+      "descricao": ""
+    },
+    {
+      "nome": "Cerveja (Galão)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "2 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Pão (pedaço)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "2 pc",
+      "descricao": ""
+    },
+    {
+      "nome": "Queijo (pedaço)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "1 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Carne (pedaço)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "3 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Vinho, comum (jarro)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "2 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Vinho, fino (garrafa)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Banquete (por pessoa)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, miserável (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "3 pc",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, pobre (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "6 pc",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, modesta (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "3 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, confortável (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "5 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, rica (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "8 pp",
+      "descricao": ""
+    },
+    {
+      "nome": "Refeição, aristocrática (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "2 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Estadia, miserável (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "7 pc",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Estadia, pobre (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "1 pp",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Estadia, modesta (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "5 pp",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Estadia, confortável (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "8 pp",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Estadia, rica (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "2 po",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Estadia, aristocrática (dia)",
+      "categoria": "Comida e Bebida",
+      "peso": "",
+      "preco": "4 po",
+      "descricao": "Hospedagem em estalagem."
+    },
+    {
+      "nome": "Ferramentas de Carpinteiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "3 kg",
+      "preco": "8 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Cartógrafo",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "3 kg",
+      "preco": "15 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Costureiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "1 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Coureiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "5 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Entalhador",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "1 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Ferreiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "4 kg",
+      "preco": "20 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Funileiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "5 kg",
+      "preco": "50 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Joalheiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "1 kg",
+      "preco": "25 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Oleiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "1,5 kg",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Pedreiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "4 kg",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Pintor",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Sapateiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "5 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Vidreiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "30 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Alquimista",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "4 kg",
+      "preco": "50 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Suprimentos de Cervejeiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "4,5 kg",
+      "preco": "20 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Suprimentos de Caligrafia",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "2,5 kg",
+      "preco": "10 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Utensílios de Cozinheiro",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "4 kg",
+      "preco": "1 po",
+      "descricao": ""
+    },
+    {
+      "nome": "Ferramentas de Navegação",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "1 kg",
+      "preco": "25 po",
+      "descricao": "Traçar rumo e seguir cartas náuticas."
+    },
+    {
+      "nome": "Ferramentas de Ladrão",
+      "categoria": "Ferramentas de Ofício",
+      "peso": "0,5 kg",
+      "preco": "25 po",
+      "descricao": "Abrir fechaduras e desarmar armadilhas."
+    },
+    {
+      "nome": "Kit de Disfarce",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1,5 kg",
+      "preco": "25 po",
+      "descricao": "Cosméticos, tintura de cabelo e adereços para criar disfarces."
+    },
+    {
+      "nome": "Kit de Falsificação",
+      "categoria": "Kits e Instrumentos",
+      "peso": "2,5 kg",
+      "preco": "15 po",
+      "descricao": "Papéis, tintas e selos para falsificar documentos."
+    },
+    {
+      "nome": "Kit de Herbalismo",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1,5 kg",
+      "preco": "5 po",
+      "descricao": "Identificar/aplicar ervas; necessário para criar antídotos e poções de cura."
+    },
+    {
+      "nome": "Kit de Venenos",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1 kg",
+      "preco": "50 po",
+      "descricao": "Frascos e produtos químicos para criar venenos."
+    },
+    {
+      "nome": "Baralho de Cartas",
+      "categoria": "Kits e Instrumentos",
+      "peso": "",
+      "preco": "5 pp",
+      "descricao": "Kit de jogos."
+    },
+    {
+      "nome": "Conjunto de Dados",
+      "categoria": "Kits e Instrumentos",
+      "peso": "",
+      "preco": "1 pp",
+      "descricao": "Kit de jogos."
+    },
+    {
+      "nome": "Xadrez do Dragão",
+      "categoria": "Kits e Instrumentos",
+      "peso": "0,25 kg",
+      "preco": "1 po",
+      "descricao": "Kit de jogos."
+    },
+    {
+      "nome": "Alaúde",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1 kg",
+      "preco": "35 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Flauta",
+      "categoria": "Kits e Instrumentos",
+      "peso": "0,5 kg",
+      "preco": "2 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Flauta de Pã",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1 kg",
+      "preco": "12 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Gaita de Foles",
+      "categoria": "Kits e Instrumentos",
+      "peso": "3 kg",
+      "preco": "30 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Lira",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1 kg",
+      "preco": "30 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Tambor",
+      "categoria": "Kits e Instrumentos",
+      "peso": "1,5 kg",
+      "preco": "6 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Violino",
+      "categoria": "Kits e Instrumentos",
+      "peso": "3 kg",
+      "preco": "30 po",
+      "descricao": "Instrumento musical."
+    },
+    {
+      "nome": "Pacote de Aventureiro",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "12 po",
+      "descricao": "Mochila, pé de cabra, martelo, 10 pítons, 10 tochas, caixa de fogo, 10 dias de rações, cantil e 15m de corda de cânhamo."
+    },
+    {
+      "nome": "Pacote de Explorador",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "10 po",
+      "descricao": "Mochila, saco de dormir, kit de refeição, caixa de fogo, 10 tochas, 10 dias de rações, cantil e 15m de corda de cânhamo."
+    },
+    {
+      "nome": "Pacote de Assaltante",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "16 po",
+      "descricao": "Mochila, saco com 1.000 esferas de metal, 3m de linha, sino, 5 velas, pé de cabra, martelo, 10 pítons, lanterna coberta, 2 frascos de óleo, 5 dias de rações, caixa de fogo, cantil e 15m de corda de cânhamo."
+    },
+    {
+      "nome": "Pacote de Diplomata",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "39 po",
+      "descricao": "Baú, 2 caixas para mapas/pergaminhos, roupas finas, vidro de tinta, caneta tinteiro, lâmpada, 2 frascos de óleo, 5 folhas de papel, vidro de perfume, parafina e sabão."
+    },
+    {
+      "nome": "Pacote de Estudioso",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "40 po",
+      "descricao": "Mochila, livro de estudo, vidro de tinta, caneta tinteiro, 10 folhas de pergaminho, saquinho de areia e pequena faca."
+    },
+    {
+      "nome": "Pacote de Sacerdote",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "19 po",
+      "descricao": "Mochila, cobertor, 10 velas, caixa de fogo, caixa de esmolas, 2 blocos de incenso, incensário, vestes, 2 dias de rações e cantil."
+    },
+    {
+      "nome": "Pacote de Artista",
+      "categoria": "Pacotes de Aventureiro",
+      "peso": "",
+      "preco": "40 po",
+      "descricao": "Mochila, saco de dormir, 2 fantasias, 5 velas, 5 dias de rações, cantil e kit de disfarce."
+    },
+    {
+      "nome": "Acolchoada",
+      "categoria": "Armaduras",
+      "peso": "4 kg",
+      "preco": "5 po",
+      "descricao": "Armadura leve · CA 11 + modificador de Destreza · Desvantagem em Furtividade. Vestir: 1 minuto · Remover: 1 minuto."
+    },
+    {
+      "nome": "Couro",
+      "categoria": "Armaduras",
+      "peso": "5 kg",
+      "preco": "10 po",
+      "descricao": "Armadura leve · CA 11 + modificador de Destreza. Vestir: 1 minuto · Remover: 1 minuto."
+    },
+    {
+      "nome": "Couro Batida",
+      "categoria": "Armaduras",
+      "peso": "6,5 kg",
+      "preco": "45 po",
+      "descricao": "Armadura leve · CA 12 + modificador de Destreza. Vestir: 1 minuto · Remover: 1 minuto."
+    },
+    {
+      "nome": "Gibão de Peles",
+      "categoria": "Armaduras",
+      "peso": "6 kg",
+      "preco": "10 po",
+      "descricao": "Armadura média · CA 12 + modificador de Destreza (máx. +2). Vestir: 5 minutos · Remover: 1 minuto."
+    },
+    {
+      "nome": "Camisão de Malha",
+      "categoria": "Armaduras",
+      "peso": "10 kg",
+      "preco": "30 po",
+      "descricao": "Armadura média · CA 13 + modificador de Destreza (máx. +2). Vestir: 5 minutos · Remover: 1 minuto."
+    },
+    {
+      "nome": "Brunea",
+      "categoria": "Armaduras",
+      "peso": "22,5 kg",
+      "preco": "50 po",
+      "descricao": "Armadura média · CA 14 + modificador de Destreza (máx. +2) · Desvantagem em Furtividade. Vestir: 5 minutos · Remover: 1 minuto."
+    },
+    {
+      "nome": "Peitoral",
+      "categoria": "Armaduras",
+      "peso": "10 kg",
+      "preco": "400 po",
+      "descricao": "Armadura média · CA 14 + modificador de Destreza (máx. +2). Vestir: 5 minutos · Remover: 1 minuto."
+    },
+    {
+      "nome": "Meia-Armadura",
+      "categoria": "Armaduras",
+      "peso": "20 kg",
+      "preco": "750 po",
+      "descricao": "Armadura média · CA 15 + modificador de Destreza (máx. +2) · Desvantagem em Furtividade. Vestir: 5 minutos · Remover: 1 minuto."
+    },
+    {
+      "nome": "Cota de Anéis",
+      "categoria": "Armaduras",
+      "peso": "20 kg",
+      "preco": "30 po",
+      "descricao": "Armadura pesada · CA 15 · Desvantagem em Furtividade. Vestir: 10 minutos · Remover: 5 minutos."
+    },
+    {
+      "nome": "Cota de Malha",
+      "categoria": "Armaduras",
+      "peso": "27,5 kg",
+      "preco": "75 po",
+      "descricao": "Armadura pesada · CA 16 · Força 13 · Desvantagem em Furtividade. Vestir: 10 minutos · Remover: 5 minutos."
+    },
+    {
+      "nome": "Cota de Talas",
+      "categoria": "Armaduras",
+      "peso": "30 kg",
+      "preco": "200 po",
+      "descricao": "Armadura pesada · CA 17 · Força 14 · Desvantagem em Furtividade. Vestir: 10 minutos · Remover: 5 minutos."
+    },
+    {
+      "nome": "Placas",
+      "categoria": "Armaduras",
+      "peso": "32,5 kg",
+      "preco": "1.500 po",
+      "descricao": "Armadura pesada · CA 18 · Força 15 · Desvantagem em Furtividade. Vestir: 10 minutos · Remover: 5 minutos."
+    },
+    {
+      "nome": "Escudo",
+      "categoria": "Armaduras",
+      "peso": "3 kg",
+      "preco": "10 po",
+      "descricao": "Escudo · CA +2. Vestir: 1 ação · Remover: 1 ação."
+    },
+    {
+      "nome": "Adaga",
+      "categoria": "Armas",
+      "peso": "0,5 kg",
+      "preco": "2 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d4 perfurante · Acuidade, leve, arremesso (distância 6/18 m)."
+    },
+    {
+      "nome": "Azagaia",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "5 pp",
+      "descricao": "Arma simples corpo a corpo · Dano 1d6 perfurante · Arremesso (distância 9/36 m)."
+    },
+    {
+      "nome": "Bordão",
+      "categoria": "Armas",
+      "peso": "2 kg",
+      "preco": "2 pp",
+      "descricao": "Arma simples corpo a corpo · Dano 1d6 concussão · Versátil (1d8)."
+    },
+    {
+      "nome": "Clava Grande",
+      "categoria": "Armas",
+      "peso": "5 kg",
+      "preco": "2 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d8 concussão · Pesada, duas mãos."
+    },
+    {
+      "nome": "Foice Curta",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "1 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d4 cortante · Leve."
+    },
+    {
+      "nome": "Lança",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "1 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d6 perfurante · Arremesso (distância 6/18 m), versátil (1d8)."
+    },
+    {
+      "nome": "Maça",
+      "categoria": "Armas",
+      "peso": "2 kg",
+      "preco": "5 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d6 concussão · —."
+    },
+    {
+      "nome": "Machadinha",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "5 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d6 cortante · Leve, arremesso (distância 6/18 m)."
+    },
+    {
+      "nome": "Martelo Leve",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "2 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d4 concussão · Leve, arremesso (distância 6/18 m)."
+    },
+    {
+      "nome": "Porrete",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "1 po",
+      "descricao": "Arma simples corpo a corpo · Dano 1d4 concussão · Leve."
+    },
+    {
+      "nome": "Arco Curto",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "25 po",
+      "descricao": "Arma simples à distância · Dano 1d6 perfurante · Munição (distância 24/96 m), duas mãos."
+    },
+    {
+      "nome": "Besta Leve",
+      "categoria": "Armas",
+      "peso": "2,5 kg",
+      "preco": "25 po",
+      "descricao": "Arma simples à distância · Dano 1d8 perfurante · Munição (distância 24/96 m), recarga, duas mãos."
+    },
+    {
+      "nome": "Dardo",
+      "categoria": "Armas",
+      "peso": "0,1 kg",
+      "preco": "5 pc",
+      "descricao": "Arma simples à distância · Dano 1d4 perfurante · Acuidade, arremesso (distância 6/18 m)."
+    },
+    {
+      "nome": "Funda",
+      "categoria": "Armas",
+      "peso": "—",
+      "preco": "1 pp",
+      "descricao": "Arma simples à distância · Dano 1d4 concussão · Munição (distância 9/36 m)."
+    },
+    {
+      "nome": "Alabarda",
+      "categoria": "Armas",
+      "peso": "3 kg",
+      "preco": "20 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d10 cortante · Pesada, alcance, duas mãos."
+    },
+    {
+      "nome": "Cimitarra",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "25 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d6 cortante · Acuidade, leve."
+    },
+    {
+      "nome": "Chicote",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "2 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d4 cortante · Acuidade, alcance."
+    },
+    {
+      "nome": "Espada Curta",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d6 cortante · Acuidade, leve."
+    },
+    {
+      "nome": "Espada Grande",
+      "categoria": "Armas",
+      "peso": "3 kg",
+      "preco": "50 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 2d6 cortante · Pesada, duas mãos."
+    },
+    {
+      "nome": "Espada Longa",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "15 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 cortante · Versátil (1d10)."
+    },
+    {
+      "nome": "Glaive",
+      "categoria": "Armas",
+      "peso": "3 kg",
+      "preco": "20 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d10 cortante · Pesada, alcance, duas mãos."
+    },
+    {
+      "nome": "Lança de Montaria",
+      "categoria": "Armas",
+      "peso": "3 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d12 perfurante · Alcance, especial."
+    },
+    {
+      "nome": "Lança Longa",
+      "categoria": "Armas",
+      "peso": "4 kg",
+      "preco": "5 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d10 perfurante · Pesada, alcance, duas mãos."
+    },
+    {
+      "nome": "Maça Estrela",
+      "categoria": "Armas",
+      "peso": "2 kg",
+      "preco": "15 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 perfurante · —."
+    },
+    {
+      "nome": "Machado Grande",
+      "categoria": "Armas",
+      "peso": "3,5 kg",
+      "preco": "30 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d12 cortante · Pesada, duas mãos."
+    },
+    {
+      "nome": "Machado de Batalha",
+      "categoria": "Armas",
+      "peso": "2 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 cortante · Versátil (1d10)."
+    },
+    {
+      "nome": "Malho",
+      "categoria": "Armas",
+      "peso": "5 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 2d6 concussão · Pesada, duas mãos."
+    },
+    {
+      "nome": "Mangual",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 concussão · —."
+    },
+    {
+      "nome": "Martelo de Guerra",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "15 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 concussão · Versátil (1d10)."
+    },
+    {
+      "nome": "Picareta de Guerra",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "5 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 perfurante · —."
+    },
+    {
+      "nome": "Rapiera",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "25 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d8 perfurante · Acuidade."
+    },
+    {
+      "nome": "Tridente",
+      "categoria": "Armas",
+      "peso": "2 kg",
+      "preco": "5 po",
+      "descricao": "Arma marcial corpo a corpo · Dano 1d6 perfurante · Arremesso (distância 6/18 m), versátil (1d8)."
+    },
+    {
+      "nome": "Arco Longo",
+      "categoria": "Armas",
+      "peso": "1 kg",
+      "preco": "50 po",
+      "descricao": "Arma marcial à distância · Dano 1d8 perfurante · Munição (distância 15/180 m), pesada, duas mãos."
+    },
+    {
+      "nome": "Besta de Mão",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "70 po",
+      "descricao": "Arma marcial à distância · Dano 1d6 perfurante · Munição (distância 9/36 m), leve, recarga."
+    },
+    {
+      "nome": "Besta Pesada",
+      "categoria": "Armas",
+      "peso": "4,5 kg",
+      "preco": "50 po",
+      "descricao": "Arma marcial à distância · Dano 1d10 perfurante · Munição (distância 30/120 m), pesada, recarga."
+    },
+    {
+      "nome": "Rede",
+      "categoria": "Armas",
+      "peso": "1,5 kg",
+      "preco": "1 po",
+      "descricao": "Arma marcial à distância · Dano — · Especial, arremesso (distância 1,5/4,5 m)."
+    },
+    {
+      "nome": "Zarabatana",
+      "categoria": "Armas",
+      "peso": "0,5 kg",
+      "preco": "10 po",
+      "descricao": "Arma marcial à distância · Dano 1 perfurante · Munição (distância 7,5/30 m), recarga."
+    }
   ]
 }
