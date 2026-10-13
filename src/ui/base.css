@@ -1,6 +1,6 @@
 :root {
   --bg: #16130f; --panel: #221d17; --panel-2: #2c251d; --line: #4a3f31;
-  --text: #efe6d6; --muted: #b3a58d; --accent: #d4a24c; --accent-ink: #1b1409;
+  --text: #efe6d6; --muted: #cdbfa5; --accent: #d4a24c; --accent-ink: #1b1409;
   --danger: #d0574a; --heal: #5fae6e; --temp: #5b9bd5; --focus: #ffd27a;
   --radius: 12px; --shadow: 0 2px 10px rgb(0 0 0 / .35);
   color-scheme: dark;

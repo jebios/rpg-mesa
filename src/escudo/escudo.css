@@ -18,3 +18,13 @@ details.more summary { cursor: pointer; color: var(--accent); font-size: .9rem; 
 .skl { columns: 2; font-size: .82rem; } .skl div { break-inside: avoid; }
 .empty { text-align: center; padding: 3rem 1rem; }
 @media (max-width: 600px) { .code { font-size: 1.3rem; } }
+
+/* Celular deitado (paisagem, pouca altura): 300px mínimo apertava os cartões. */
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 950px) {
+  .shell { padding: 10px 12px; }
+  .party { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .6rem; }
+}
+/* Paisagem bem estreita (até ~640px): uma coluna só. */
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 640px) {
+  .party { grid-template-columns: 1fr; }
+}
