@@ -36,6 +36,12 @@ service cloud.firestore {
       match /maps/{m}/{rest=**} { allow read: if isMember(c); allow write: if isDM(c); }
     }
 
+    // Compêndio de regras (conteúdo do livro): só usuários logados leem; só o administrador importa.
+    match /compendium/{doc} {
+      allow read: if signedIn();
+      allow write: if signedIn() && request.auth.token.email in ['j.biosf@gmail.com'];
+    }
+
     // Fichas: pertencem ao jogador. Só o DONO e o MESTRE da mesa onde a ficha está podem ver/editar.
     // Outros jogadores não enxergam fichas alheias.
     match /characters/{id} {

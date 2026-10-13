@@ -5,7 +5,7 @@ import { makeJoinCode } from './backend.js';
 
 const KEY = 'rpgmesa:db2';
 const SESSION = 'rpgmesa:session'; // sessionStorage: cada aba pode ter um usuário diferente
-const empty = () => ({ users: {}, campaigns: {}, joinCodes: {}, characters: {} });
+const empty = () => ({ users: {}, campaigns: {}, joinCodes: {}, characters: {}, npcs: {}, dmdocs: {}, combat: {} });
 const load = () => { try { return { ...empty(), ...JSON.parse(localStorage.getItem(KEY)) }; } catch { return empty(); } };
 const id = () => Math.random().toString(36).slice(2, 10);
 
@@ -143,10 +143,68 @@ export async function create() {
       if (patch) await this.updateCharacter(chId, patch);
       return patch;
     },
+    async getCompendium() {
+      try { return JSON.parse(localStorage.getItem('rpgmesa:compendium') || 'null'); } catch { return null; }
+    },
+    async saveCompendium(obj) {
+      const versao = (obj.versao || 'v') + '-' + Date.now();
+      localStorage.setItem('rpgmesa:compendium', JSON.stringify({ ...obj, versao }));
+      return versao;
+    },
     async deleteCharacter(chId) {
       commit((db) => {
         if (db.characters[chId]?.ownerUid !== user?.uid) throw new Error('Só o dono pode apagar a ficha.');
         delete db.characters[chId];
+      });
+    },
+
+    // ---------- NPCs (privados do Mestre) ----------
+    async createNpc(cid, data) {
+      const uid = need();
+      return commit((db) => {
+        if (db.campaigns[cid]?.dmUid !== uid) throw new Error('Sem permissão.');
+        const k = id();
+        db.npcs[k] = { campaignId: cid, ...data, createdAt: Date.now() };
+        return k;
+      });
+    },
+    async updateNpc(cid, npcId, patch) {
+      commit((db) => {
+        if (db.campaigns[cid]?.dmUid !== user?.uid) throw new Error('Sem permissão.');
+        Object.assign(db.npcs[npcId], patch);
+      });
+    },
+    async deleteNpc(cid, npcId) {
+      commit((db) => {
+        if (db.campaigns[cid]?.dmUid !== user?.uid) throw new Error('Sem permissão.');
+        delete db.npcs[npcId];
+      });
+    },
+    watchNpcs(cid, cb) {
+      return subscribe((db) => Object.entries(db.npcs || {}).filter(([, n]) => n.campaignId === cid).map(([k, v]) => withId(k, v)), cb);
+    },
+
+    // ---------- Anotações e itens do Mestre ----------
+    watchDmDoc(cid, docId, cb) {
+      return subscribe((db) => (db.campaigns[cid] && user?.uid === db.campaigns[cid].dmUid ? (db.dmdocs?.[`${cid}:${docId}`] || null) : null), cb);
+    },
+    async saveDmDoc(cid, docId, data) {
+      commit((db) => {
+        if (db.campaigns[cid]?.dmUid !== user?.uid) throw new Error('Sem permissão.');
+        db.dmdocs ||= {};
+        db.dmdocs[`${cid}:${docId}`] = { ...(db.dmdocs[`${cid}:${docId}`] || {}), ...data };
+      });
+    },
+
+    // ---------- Combate / iniciativa (jogadores também podem ler) ----------
+    watchCombat(cid, cb) {
+      return subscribe((db) => (db.campaigns[cid] && user && db.campaigns[cid].members[user.uid] ? (db.combat?.[cid] || null) : null), cb);
+    },
+    async saveCombat(cid, data) {
+      commit((db) => {
+        if (db.campaigns[cid]?.dmUid !== user?.uid) throw new Error('Sem permissão.');
+        db.combat ||= {};
+        db.combat[cid] = data;
       });
     },
   };

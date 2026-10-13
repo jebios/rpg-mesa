@@ -4,7 +4,8 @@ import { firebaseConfig } from './config.js';
 let impl;
 export async function getBackend() {
   if (impl) return impl;
-  impl = firebaseConfig.apiKey
+  const demo = new URLSearchParams(location.search).has('demo'); // ?demo força o modo local de teste
+  impl = firebaseConfig.apiKey && !demo
     ? await (await import('./backend-firebase.js')).create(firebaseConfig)
     : await (await import('./backend-local.js')).create();
   return impl;

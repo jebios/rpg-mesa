@@ -22,6 +22,7 @@ const ERROS = {
   'auth/too-many-requests': 'Muitas tentativas. Aguarde um pouco e tente de novo.',
   'auth/popup-closed-by-user': 'Login com Google cancelado.',
   'auth/network-request-failed': 'Sem conexão com a internet.',
+  'auth/operation-not-allowed': 'Este tipo de login não está ativado no Firebase (Authentication → Método de login).',
   'auth/unauthorized-domain': 'Este domínio não está autorizado no Firebase (Authentication → Configurações → Domínios autorizados).',
 };
 const friendly = (e) => { throw new Error(ERROS[e.code] || e.message); };
@@ -103,5 +104,45 @@ export async function create(config) {
       return patch;
     }),
     deleteCharacter: (id) => deleteDoc(doc(chars, id)),
+
+    // ---------- Compêndio (JSON dividido em partes de ~700 mil caracteres; cache no aparelho) ----------
+    async getCompendium() {
+      const meta = await getDoc(doc(db, 'compendium', 'meta'));
+      if (!meta.exists()) return null;
+      const { versao, partes } = meta.data();
+      const key = 'rpgmesa:compendium';
+      try {
+        const c = JSON.parse(localStorage.getItem(key) || 'null');
+        if (c && c.versao === versao) return c;
+      } catch {}
+      const parts = await Promise.all(Array.from({ length: partes }, (_, n) => getDoc(doc(db, 'compendium', 'p' + n))));
+      const obj = JSON.parse(parts.map((p) => p.data().data).join(''));
+      obj.versao = versao;
+      try { localStorage.setItem(key, JSON.stringify(obj)); } catch {}
+      return obj;
+    },
+    async saveCompendium(obj) {
+      const txt = JSON.stringify(obj);
+      const SIZE = 700000;
+      const partes = Math.ceil(txt.length / SIZE);
+      for (let n = 0; n < partes; n++) await setDoc(doc(db, 'compendium', 'p' + n), { data: txt.slice(n * SIZE, (n + 1) * SIZE) });
+      const versao = (obj.versao || 'v') + '-' + Date.now();
+      await setDoc(doc(db, 'compendium', 'meta'), { versao, partes, por: me().email || me().uid, em: serverTimestamp() });
+      return versao;
+    },
+
+    // ---------- NPCs (privados do Mestre, dentro da campanha) ----------
+    watchNpcs: (cid, cb) => onSnapshot(collection(db, 'campaigns', cid, 'npcs'), (qs) => cb(list(qs))),
+    createNpc: (cid, data) => addDoc(collection(db, 'campaigns', cid, 'npcs'), { ...data, createdAt: serverTimestamp() }).then((r) => r.id),
+    updateNpc: (cid, npcId, patch) => updateDoc(doc(db, 'campaigns', cid, 'npcs', npcId), patch),
+    deleteNpc: (cid, npcId) => deleteDoc(doc(db, 'campaigns', cid, 'npcs', npcId)),
+
+    // ---------- Anotações e itens do Mestre (um documento por assunto) ----------
+    watchDmDoc: (cid, docId, cb) => onSnapshot(doc(db, 'campaigns', cid, 'dm', docId), (s) => cb(s.exists() ? s.data() : null)),
+    saveDmDoc: (cid, docId, data) => setDoc(doc(db, 'campaigns', cid, 'dm', docId), data, { merge: true }),
+
+    // ---------- Combate / iniciativa (jogadores também podem ler) ----------
+    watchCombat: (cid, cb) => onSnapshot(doc(db, 'campaigns', cid, 'combat', 'estado'), (s) => cb(s.exists() ? s.data() : null)),
+    saveCombat: (cid, data) => setDoc(doc(db, 'campaigns', cid, 'combat', 'estado'), data),
   };
 }

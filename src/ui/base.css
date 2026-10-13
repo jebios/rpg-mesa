@@ -6,7 +6,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--text); }
+html, body { margin: 0; background: var(--bg); color: var(--text); overflow-x: hidden; }
 body { font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 0 0 .5rem; line-height: 1.2; }
 h1 { font-size: 1.4rem; } h2 { font-size: 1.15rem; color: var(--accent); } h3 { font-size: 1rem; }
@@ -21,6 +21,7 @@ label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: .
   display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
   min-height: 48px; padding: .6rem 1rem; border-radius: 10px; border: 1px solid var(--line);
   background: var(--panel-2); cursor: pointer; font-weight: 600; touch-action: manipulation;
+  text-decoration: none; color: inherit;
 }
 .btn:active { transform: translateY(1px); }
 .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
@@ -66,3 +67,35 @@ label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: .
 .or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .acct { display: inline-flex; align-items: center; gap: .5rem; }
 .acct-name { color: var(--muted); font-size: .9rem; max-width: 12rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* ---- texto do compêndio ---- */
+.md p { margin: .4rem 0; line-height: 1.5; }
+.md p.bullet { padding-left: .6rem; }
+.md h4 { margin: .8rem 0 .3rem; font-size: .95rem; color: var(--accent); }
+.md h5 { margin: .7rem 0 .2rem; font-size: .9rem; }
+.mdtable { overflow-x: auto; margin: .4rem 0; }
+.mdtable table { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
+.mdtable td { border: 1px solid var(--line); padding: .25rem .4rem; vertical-align: top; }
+.mdtable tr:first-child td { background: var(--panel-2); font-weight: 600; }
+details.entry { border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); }
+details.entry > summary { padding: .65rem .8rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: .5rem; min-height: 48px; list-style: none; }
+details.entry > summary::-webkit-details-marker { display: none; }
+details.entry > summary .t { font-weight: 600; }
+details.entry > .body { padding: 0 .8rem .8rem; font-size: .93rem; }
+details.entry[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: .4rem; }
+.lvl-badge { font-size: .75rem; color: var(--muted); white-space: nowrap; }
+.filters { display: flex; gap: .35rem; overflow-x: auto; padding-bottom: .2rem; }
+.filters button { flex: none; min-height: 36px; padding: 0 .75rem; border-radius: 999px; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; font-size: .85rem; }
+.filters button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: transparent; font-weight: 700; }
+.filters button.unavail { opacity: .4; }
+.libitem { display: flex; justify-content: space-between; align-items: center; gap: .5rem; border-bottom: 1px solid var(--line); padding: .45rem 0; min-height: 52px; }
+.libitem .info { flex: 1; min-width: 0; }
+.libitem .info small { color: var(--muted); display: block; }
+.sectiontitle { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.inv-divider { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin: .9rem 0 .3rem; padding-top: .3rem; border-top: 1px solid var(--line); font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.inv-divider:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.empty-note { color: var(--muted); font-size: .9rem; margin: .2rem 0; }
+.addbtn { min-width: 40px; min-height: 36px; padding: 0 .6rem; font-size: 1.1rem; }
+/* ---- player de música fixo (Escudo) ---- */
+#music-bar { position: fixed; left: 1rem; bottom: 1rem; z-index: 60; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: var(--shadow); padding: .5rem .7rem; display: none; max-width: calc(100vw - 2rem); overflow-x: auto; }
+#music-bar.show { display: flex; }
